@@ -177,15 +177,15 @@ p:last-of-type {
   </head>
   <body>
     <form id="name-form" action="/fake-form-action">
-      <input id="name-input" placeholder="你的 名字">
-      <p>云上的聊天, 基于<br>
+      <input id="name-input" placeholder="你的 代号">
+      <p>☁️ 云端聊天频道, 动力来源:<br>
         <a href="https://blog.cloudflare.com/introducing-workers-durable-objects" target="_blank">Cloudflare云端</a></p>
     </form>
     <form id="room-form" action="/fake-form-action">
-      <p>进入一个公共房间:</p>
-      <input id="room-name" placeholder="room name"><button id="go-public">进入 &raquo;</button>
-      <p>OR</p>
-      <button id="go-private">创建一个私人的房间 &raquo;</button>
+      <p>进入一个公共空间站:</p>
+      <input id="room-name" placeholder="空间站 代号"><button id="go-public">进入 &raquo;</button>
+      <p>或者</p>
+      <button id="go-private">创建一个私人的空间站 &raquo;</button>
     </form>
     <form id="chatroom" action="/fake-form-action">
       <div id="chatlog">
@@ -424,15 +424,15 @@ function join() {
       if (!wroteWelcomeMessages) {
         wroteWelcomeMessages = true;
         addChatMessage(null,
-            "* 这是齐天大圣的秘密基地 * " );
+            "* 这是齐天大圣的秘密基地 " );
         addChatMessage(null,
-            "* 让我们一起聊天吧. " );
+            "* 💬 频道信号已连接. " );
         if (roomname.length == 64) {
           addChatMessage(null,
-              "* 这是私人房间. 你也可以邀请别的朋友来加入.");
+              "* 这是私人空间站. 你也可以邀请别的朋友来加入.");
         } else {
           addChatMessage(null,
-              "* 欢迎你 #" + roomname + ". 你好啊!");
+              "* 欢迎你 #" + roomname + ". 来到空间站!");
         }
       }
     } else {
